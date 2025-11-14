@@ -1,59 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
-  <title>Pencil Morph → Infinite Pattern</title>
-  <meta name="description" content="Minimal 1:1 looping GIF/WebP with no border. All text centered. Mobile-first." />
+  <title>Lazy Notes of a Friday Afternoon — Gallery Presentation</title>
+  <meta name="description" content="Presenting the artwork 'Lazy Notes of a Friday Afternoon'.">
+  <!-- (Optional) Social preview; update once your GIF is online -->
+  <meta property="og:title" content="Lazy Notes of a Friday Afternoon">
+  <meta property="og:description" content="Looping pencil sketch animation, presented by the gallery.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="video.gif">
   <style>
-    /* Ultra-minimal: white bg, black text; NO BORDERS; centered text */
+    /* Minimal, artsy: white bg, black text, centered. No borders/shadows. */
     :root {
-      /* vmin so square fits even on short phones */
-      --size: min(94vmin, 720px);
+      --size: min(94vmin, 720px); /* media size: friendly on phones */
       --pad: max(20px, env(safe-area-inset-left));
     }
     html, body { height: 100%; background: #fff; color: #000; }
     body {
       margin: 0;
-      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
     .wrap {
-      max-width: 860px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: calc(24px + env(safe-area-inset-top)) var(--pad) 48px;
-      text-align: center; /* center all text */
+      padding: calc(28px + env(safe-area-inset-top)) var(--pad) 64px;
+      text-align: center;
     }
-    header { margin: 16px 0 8px; }
-    h1 { margin: 0 0 .35rem; font-weight: 500; font-size: clamp(1.2rem, 1rem + 2vw, 1.6rem); }
-    p { margin: 0; opacity: .72; }
-    /* 1:1 media: no border, centered, responsive */
+    .eyebrow {
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      opacity: .65;
+      margin: 4px 0 14px;
+    }
+    h1 {
+      margin: 0;
+      font-weight: 500;
+      font-size: clamp(1.6rem, 1.2rem + 3vw, 2.6rem);
+    }
+    .byline {
+      margin: 8px 0 0;
+      opacity: .75;
+    }
     .media {
       width: var(--size);
       height: auto;
       display: block;
-      margin: 24px auto 0;
+      margin: 28px auto 10px;
       /* no border */
     }
-    footer { margin-top: 32px; opacity: .55; font-size: .9rem; }
+    .caption {
+      margin: 0;
+      opacity: .72;
+      font-size: .95rem;
+    }
+    .spacer { height: 22px; }
+    .note {
+      max-width: 720px;
+      margin: 0 auto;
+      opacity: .86;
+    }
+    .hr {
+      height: 1px;
+      width: min(160px, 40%);
+      background: #000;
+      opacity: .15;
+      margin: 28px auto;
+    }
+    .details {
+      margin: 0 auto;
+      opacity: .7;
+      font-size: .95rem;
+    }
+    .details span { white-space: nowrap; }
+    .cta {
+      display: inline-block;
+      margin-top: 22px;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+    }
+    footer {
+      margin-top: 48px;
+      opacity: .55;
+      font-size: .9rem;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Pencil Morph → Infinite Pattern</h1>
-      <p>Square GIF/WebP loop · minimalist · centered text</p>
-    </header>
+  <main class="wrap">
+    <div class="eyebrow">Presented by Jesch & Co</div>
+    <h1>Lazy Notes of a Friday Afternoon</h1>
+    <p class="byline">By Evans Haji-Touma, 2025</p>
+    <p class="byline">Graphite on notebook paper</p>
 
-    <!-- Use WebP if available; GIF as fallback -->
+    <!-- Prefer WebP for size; GIF as fallback -->
     <picture>
-      <!-- Uncomment and add a WebP if you have one -->
       <!-- <source srcset="assets/output.webp" type="image/webp"> -->
-      <img class="media" src="video.gif" alt="Looping pencil morph">
+      <img class="media" src="assets/output.gif" alt="Looping square animation of pencil scribbles gradually forming and dissolving, titled Lazy Notes of a Friday Afternoon.">
     </picture>
 
-    <footer>© 2025 Your Name</footer>
-  </div>
+    <p class="caption">Looping animated GIF (1×1) · graphite sketch & digital animation</p>
+
+    <div class="hr" role="presentation"></div>
+
+    <p class="note">
+      <em>Lazy Notes of a Friday Afternoon</em> traces the idle choreography of graphite when thought wanders.
+      The piece begins as casual scribbling—hesitations, overdrawn lines, erasures—then finds a rhythm,
+      tiling into a quiet order before slipping back into the margins. The work keeps the tactility of pencil
+      and paper while embracing digital repetition, inviting viewers to linger in the space between sketch and structure.
+    </p>
+
+    <div class="spacer"></div>
+
+    <p class="details">
+      <span>Medium: graphite & digital, looping GIF</span> ·
+      <span>Dimensions: 1×1 (responsive)</span> ·
+      <span>Duration: continuous loop</span>
+    </p>
+
+    <a class="cta" href="#" target="_blank" rel="noopener">Request press kit</a>
+
+    <footer>© 2025 Jesch & Co · All rights reserved</footer>
+  </main>
 </body>
 </html>
