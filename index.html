@@ -10,12 +10,23 @@
   <meta property="og:description" content="Browse current exhibitions presented by the gallery.">
   <meta property="og:type" content="website">
   <style>
-    :root { --size: min(94vmin, 720px); --pad: max(20px, env(safe-area-inset-left)); }
+:root {
+  --size: min(94vmin, 720px);
+  --padL: max(20px, env(safe-area-inset-left));
+  --padR: max(20px, env(safe-area-inset-right));
+}
     html, body { height: 100%; background: #fff; color: #000; }
     body { margin: 0; font: 12px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-    .wrap { max-width: 980px; margin: 0 auto; padding: calc(28px + env(safe-area-inset-top)) var(--pad) 64px; text-align: center; }
-
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: calc(28px + env(safe-area-inset-top));
+  padding-left: var(--padL);
+  padding-right: var(--padR);
+  padding-bottom: 64px;
+  text-align: center;
+}
     .logo { display: block; margin: 0 auto 16px; width: min(110px, 20vw); height: auto; }
 
     .eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; opacity: .65; margin: 4px 0 14px; margin-top: .25em; }
