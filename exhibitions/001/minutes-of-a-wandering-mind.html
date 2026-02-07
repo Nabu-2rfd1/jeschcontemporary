@@ -61,16 +61,17 @@
     @media (max-width: 520px) { .btn { width: 100%; } }
     .btn-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
 
-    /* NEW: back link */
-    .back {
-      display:inline-block;
-      margin: 0 auto 14px;
-      text-decoration:none;
-      color:#000;
-      border-bottom:1px solid #000;
-      padding-bottom:2px;
-      opacity:.8;
-      /* Description and links refinement */
+.back {
+  display: inline-block;
+  margin: 0 auto 14px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  opacity: .8;
+}
+
+/* refined description */
 .note {
   max-width: 62ch;
   margin: 14px auto 0;
@@ -78,8 +79,9 @@
   line-height: 1.7;
 }
 
+/* refined links under description */
 .actions {
-  margin-top: 28px;          /* key improvement */
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -99,7 +101,6 @@
 .actions a:hover {
   opacity: 1;
 }
-    }
   </style>
 </head>
 
